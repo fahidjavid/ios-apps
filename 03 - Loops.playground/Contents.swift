@@ -19,3 +19,15 @@ var myAnimalArray = ["Lion", "Crab", "Hippo", "Parrot"]
 for animal in myAnimalArray {
     print(animal)
 }
+
+
+// Another for loop example
+var fibonacciArray = [1,1,2,3,5,8,13]
+
+for number in fibonacciArray {
+    
+    let myNumber = number * 5
+    
+    print(myNumber)
+    
+}
