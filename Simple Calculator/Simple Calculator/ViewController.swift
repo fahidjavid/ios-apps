@@ -26,22 +26,55 @@ class ViewController: UIViewController {
     }
     
     @IBAction func plusBtn(_ sender: Any) {
-        result = Int(firstNumber.text!)! + Int(secondNumber.text!)!
-        resultLabel.text = String(result)
+        if let firstNumberValue = Int(firstNumber.text!) {
+            if let secondNumberValue = Int(secondNumber.text!) {
+                result = firstNumberValue + secondNumberValue
+                resultLabel.text = String(result)
+                resultLabel.text = "Result is: \(String(result))"
 
+            }
+        }
     }
     
     
     @IBAction func minusBtn(_ sender: Any) {
+        if let firstNumberValue = Int(firstNumber.text!) {
+            if let secondNumberValue = Int(secondNumber.text!) {
+                result = firstNumberValue - secondNumberValue
+                resultLabel.text = "Result is: \(String(result))"
+                
+            }
+        }
     }
     
     @IBAction func divideBtn(_ sender: Any) {
+        if let firstNumberValue = Int(firstNumber.text!) {
+            if let secondNumberValue = Int(secondNumber.text!) {
+                result = firstNumberValue / secondNumberValue
+                resultLabel.text = "Result is: \(String(result))"
+                
+            }
+        }
     }
     
     @IBAction func multiplyBtn(_ sender: Any) {
+        if let firstNumberValue = Int(firstNumber.text!) {
+            if let secondNumberValue = Int(secondNumber.text!) {
+                result = firstNumberValue * secondNumberValue
+                resultLabel.text = "Result is: \(String(result))"
+                
+            }
+        }
     }
     
     @IBAction func remainderBtn(_ sender: Any) {
+        if let firstNumberValue = Int(firstNumber.text!) {
+            if let secondNumberValue = Int(secondNumber.text!) {
+                result = firstNumberValue % secondNumberValue
+                resultLabel.text = "Result is: \(String(result))"
+                
+            }
+        }
     }
 
 }
