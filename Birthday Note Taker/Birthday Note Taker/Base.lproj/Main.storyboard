@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Birthday_Note_Taker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday Note Taker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlF-8A-TvB">
+                                <rect key="frame" x="117" y="28" width="152" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Enter Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SyF-Tc-nug">
+                                <rect key="frame" x="80" y="79" width="226" height="30"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Enter Birthday" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pQ0-Tq-OB6">
+                                <rect key="frame" x="80" y="134" width="226" height="30"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stored Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zz5-Fr-taF">
+                                <rect key="frame" x="80" y="192" width="110" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stored Date: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V75-8l-Jcb">
+                                <rect key="frame" x="80" y="221" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nh0-bS-Xn7">
+                                <rect key="frame" x="80" y="279" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dtT-oz-vl7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hM-OB-VGD">
+                                <rect key="frame" x="260" y="279" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jal-yu-2yV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zz5-Fr-taF" firstAttribute="leading" secondItem="V75-8l-Jcb" secondAttribute="leading" id="E58-Sw-F0u"/>
+                            <constraint firstItem="V75-8l-Jcb" firstAttribute="top" secondItem="Zz5-Fr-taF" secondAttribute="bottom" constant="8" symbolic="YES" id="F00-hj-nbi"/>
+                            <constraint firstItem="Nh0-bS-Xn7" firstAttribute="top" secondItem="V75-8l-Jcb" secondAttribute="bottom" constant="37" id="G5d-Gp-1qi"/>
+                            <constraint firstItem="V75-8l-Jcb" firstAttribute="leading" secondItem="Nh0-bS-Xn7" secondAttribute="leading" id="WuA-pR-5Nh"/>
+                            <constraint firstItem="SyF-Tc-nug" firstAttribute="top" secondItem="vlF-8A-TvB" secondAttribute="bottom" constant="30" id="ZT8-s8-pm3"/>
+                            <constraint firstItem="pQ0-Tq-OB6" firstAttribute="top" secondItem="SyF-Tc-nug" secondAttribute="bottom" constant="25" id="Zjy-5u-sCM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SyF-Tc-nug" secondAttribute="trailing" constant="53" id="bPa-E8-10G"/>
+                            <constraint firstItem="SyF-Tc-nug" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="64" id="g13-Xb-kZg"/>
+                            <constraint firstItem="vlF-8A-TvB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="iuY-Nb-Aii"/>
+                            <constraint firstItem="vlF-8A-TvB" firstAttribute="centerX" secondItem="SyF-Tc-nug" secondAttribute="centerX" id="jN5-Yb-Can"/>
+                            <constraint firstItem="SyF-Tc-nug" firstAttribute="leading" secondItem="pQ0-Tq-OB6" secondAttribute="leading" id="lrA-Qw-uyW"/>
+                            <constraint firstItem="SyF-Tc-nug" firstAttribute="trailing" secondItem="pQ0-Tq-OB6" secondAttribute="trailing" id="pOA-3P-NFM"/>
+                            <constraint firstItem="Zz5-Fr-taF" firstAttribute="top" secondItem="pQ0-Tq-OB6" secondAttribute="bottom" constant="28" id="vOW-zw-KG0"/>
+                            <constraint firstItem="pQ0-Tq-OB6" firstAttribute="leading" secondItem="Zz5-Fr-taF" secondAttribute="leading" id="xj3-oF-PsW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="birthdayText" destination="pQ0-Tq-OB6" id="fgp-aI-AvV"/>
+                        <outlet property="nameText" destination="SyF-Tc-nug" id="pcB-vN-U5K"/>
+                        <outlet property="storedDateLabel" destination="V75-8l-Jcb" id="NJM-2d-xAR"/>
+                        <outlet property="storedNameLabel" destination="Zz5-Fr-taF" id="xAb-Cq-9XO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
