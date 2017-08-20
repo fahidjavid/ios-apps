@@ -40,7 +40,7 @@ class ViewController: UIViewController {
             alert.addAction(okButton)
             self.present(alert, animated: true, completion: nil)
         } else {
-            let alert = UIAlertController(title: "Success", message: "\(userNameText.text) is created", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Success", message: "\(userNameText.text!) is created", preferredStyle: UIAlertControllerStyle.alert)
             let okButton = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil)
             alert.addAction(okButton)
             self.present(alert, animated: true, completion: nil)
