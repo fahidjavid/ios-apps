@@ -15,11 +15,18 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    @IBAction func myButtonClicked(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Error", message: "Very critical error, such wow", preferredStyle: UIAlertControllerStyle.alert)
+        
+        let okButton = UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil)
+        
+        alert.addAction(okButton)
+        
+        self.present(alert, animated: true, completion: nil)
     }
-
-
+    
+    
 }
 
